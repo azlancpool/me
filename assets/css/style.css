@@ -1177,6 +1177,10 @@ body .body-overlay {
 .clients-logos img:hover {
   opacity: 1;
 }
+.client-logo-center {
+  display: flex;
+  justify-content: center;
+}
 
 /* 17 - Pricing Table */
 .pricing-area {

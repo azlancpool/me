@@ -138,6 +138,10 @@
     flex: 0 0 auto;
     width: 33.3333%;
   }
+  .client-logo-center {
+    display: flex;
+    justify-content: center;
+  }
   .pricing-area {
     padding-top: 50px;
   }
@@ -306,6 +310,10 @@
   }
   .clients-logos .row .col-md-3 {
     width: 50%;
+  }
+  .client-logo-center {
+    display: flex;
+    justify-content: center;
   }
   .contact-area {
     padding-bottom: 80px;
