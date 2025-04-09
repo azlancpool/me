@@ -966,7 +966,7 @@ body .body-overlay {
 .skills .skill .skill-inner {
   border: 2px solid #565656;
   border-radius: 85px;
-  padding: 54px 0 48px 0;
+  padding: 54px 8px 48px 8px;
   margin-bottom: 20px;
   transition: 0.3s;
 }
