@@ -176,3 +176,33 @@ function setYearsOfExperience() {
   document.getElementById("yearsOfExperience").innerHTML = yearsOfExp + "+";
 }
 setYearsOfExperience();
+
+let scrollTimeout;
+const indicator = document.getElementById("icon-container");
+let isHovered = false;
+
+window.addEventListener("scroll", () => {
+  indicator.classList.add("visible");
+  clearTimeout(scrollTimeout);
+
+  scrollTimeout = setTimeout(() => {
+    if (!isHovered) {
+      indicator.classList.remove("visible");
+    }
+  }, 900);
+});
+
+// Keep it visible when hovered
+indicator.addEventListener("mouseenter", () => {
+  isHovered = true;
+});
+
+indicator.addEventListener("mouseleave", () => {
+  isHovered = false;
+  // Optional: hide it again after leaving if scrolling has already stopped
+  scrollTimeout = setTimeout(() => {
+    if (!isHovered) {
+      indicator.classList.remove("visible");
+    }
+  }, 300); // Adjust this delay if needed
+});

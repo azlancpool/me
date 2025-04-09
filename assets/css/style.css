@@ -1033,8 +1033,8 @@ body .body-overlay {
   a {
   display: block;
   font-size: 14px;
-  background: #fff;
-  color: #000;
+  background: #1f1f1f transparent;
+  color: #fff;
   padding: 7px 20px;
   border-radius: 19px;
   transition: 0.3s;
@@ -1045,8 +1045,8 @@ body .body-overlay {
   .portfolio-categories
   li
   a {
-  background: #1f1f1f;
-  color: #fff;
+  background: #fff;
+  color: #000;
 }
 .portfolio-items .portfolio-item h2 {
   font-size: 24px;
@@ -2048,4 +2048,15 @@ body .body-overlay {
 
 .global-color .setting-toggle i {
   animation: rotating 3s infinite linear !important;
+}
+
+.fade-span {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.fade-span.visible {
+  opacity: 1;
+  visibility: visible;
 }
