@@ -2050,13 +2050,10 @@ body .body-overlay {
   animation: rotating 3s infinite linear !important;
 }
 
-.fade-span {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
-}
-
-.fade-span.visible {
-  opacity: 1;
-  visibility: visible;
+#icon-container {
+  position: fixed;
+  z-index: 1000;
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: auto;
 }

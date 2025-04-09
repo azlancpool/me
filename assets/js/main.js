@@ -178,31 +178,13 @@ function setYearsOfExperience() {
 setYearsOfExperience();
 
 let scrollTimeout;
-const indicator = document.getElementById("icon-container");
-let isHovered = false;
+const iconContainer = document.getElementById("icon-container");
 
 window.addEventListener("scroll", () => {
-  indicator.classList.add("visible");
+  iconContainer.style.opacity = "1";
   clearTimeout(scrollTimeout);
 
   scrollTimeout = setTimeout(() => {
-    if (!isHovered) {
-      indicator.classList.remove("visible");
-    }
-  }, 900);
-});
-
-// Keep it visible when hovered
-indicator.addEventListener("mouseenter", () => {
-  isHovered = true;
-});
-
-indicator.addEventListener("mouseleave", () => {
-  isHovered = false;
-  // Optional: hide it again after leaving if scrolling has already stopped
-  scrollTimeout = setTimeout(() => {
-    if (!isHovered) {
-      indicator.classList.remove("visible");
-    }
-  }, 300); // Adjust this delay if needed
+    iconContainer.style.opacity = "0.5";
+  }, 200);
 });
